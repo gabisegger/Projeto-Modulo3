@@ -1,0 +1,11 @@
+#1 TOP 10 DE ANOS COM MAIS JOGOS LANÇADOS
+
+SELECT year(release_date) AS ANO, count(name) AS TOTAL_DE_JOGOS
+FROM steam
+GROUP BY YEAR(release_date)
+HAVING count(name) > 10
+ORDER BY TOTAL_DE_JOGOS  DESC
+LIMIT 10;
+
+
+
